@@ -1,4 +1,5 @@
 # jackets_vue
+Vue FrontEnd e-store with a Django Backend.
 
 ## Project setup
 ```
