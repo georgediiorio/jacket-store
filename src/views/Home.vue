@@ -50,6 +50,7 @@ export default {
   },
   methods: {
    async getLatestProducts() {
+     this.$store.commit('setIsLoading', true)
      await axios
         .get('/api/v1/latest-products/')
         .then(response => {
@@ -58,6 +59,7 @@ export default {
         .catch(error => {
           console.log(error)
         })
+        this.$store.commit('setIsLoading', false)
     },
   },
 }
